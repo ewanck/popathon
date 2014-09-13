@@ -1,0 +1,16 @@
+body {
+    margin:0px;
+    width:100%;
+    background-color:#a67272;
+}
+#voyeur-logo {
+    position:fixed;
+    left:50%;
+    top:50%;
+    width:300px;
+    margin-left:-150px;
+    margin-top:-150px;
+}
+#voyeur-logo:hover {
+    background:rgba(255,255,255,0.2);
+}

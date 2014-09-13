@@ -1,0 +1,10 @@
+body {
+    margin:0px;
+    width:100%;
+    background-color:#a67272;
+}
+#voyeur-logo {
+    left:50px;
+    top:50px;
+    width:150px;
+}

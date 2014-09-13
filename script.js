@@ -1,0 +1,1 @@
+alert("Thank you for registering with ???. You are now able to log in by clicking the logo. Enjoy your stay!");
