@@ -1,15 +1,24 @@
+<!DOCTYPE html>
 <html>
   <head>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script language="JavaScript" src="webcam.js"></script>
+    <script src="popcorn.js"></script>
     <link rel="stylesheet" type="text/css" href="main-styles.css" />
   </head>
   <body>
-    <div id="header"><img id="logo" src="voyeur.png" /></div>
+    <div id="header"><img id="logo" class="title-bar" src="voyeur.png" /><h2 id="title" class="title-bar">Opti-X</h2></div>
     <div id="main-canvas">
-      <img id="browser-view" src="start-desktop.png" />
-      <div id="webcam-view"><img src="headshot.jpg" /></div>
+      <video id="browser-view">
+	<source src="tobias-screen.webm" />
+      </video>
+      <div id="webcam-view">
+	<video id="webcam-video">
+	  <source src="tobias_webcam.webm" />
+	</video>
+      </div>
       <div id="canvas-footer">
 	<table id="canvas-buttons">
 	  <tr>
@@ -19,10 +28,16 @@
       </div>
     </div>
     <div id="sidebar">
+      <div id="documents-container" class="sidebar-container">
+	<a href="docs/The_Jakarta_Project.docx"><div class="document">The_Jakarta_Project.docx</div></a>
+	<a href="docs/The_Mass_Storage_Control_Protocol.docx"><div class="document">The_Mass_Storage_Control_Protocol.docx</div></a>
+      </div>
+      <div id="history-container" class="sidebar-container"></div>
+      <div id="email-container" class="sidebar-container"></div>
       <div id="sidebar-footer">
 	<table id="sidebar-buttons">
 	  <tr>
-	    <td id="docs-button" class="button">DOCUMENTS</td><td id="history-button" class="button">WEB HISTORY</td><td id="email-button" class="button">EMAIL</td>
+	    <td id="docs-button" class="button sidebar-button" data-cont="documents-container">DOCUMENTS</td><td id="history-button" class="button sidebar-button" data-cont="history-container">WEB HISTORY</td><td id="email-button" class="button sidebar-button" data-cont="email-container">EMAIL</td>
 	  </tr>
 	</table>
       </div>
